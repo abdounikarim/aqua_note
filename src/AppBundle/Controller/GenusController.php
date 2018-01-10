@@ -26,6 +26,17 @@ class GenusController extends Controller
 
         return new Response('<html><body>Genus created !</body></html>');
     }
+
+    /**
+     * @Route("/genus")
+     */
+    public function listAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $genuses = $em->getRepository('AppBundle:Genus')->findAll();
+        dump($genuses);die();
+    }
+
     /**
      * @Route("/genus/{genusName}")
      */
