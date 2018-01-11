@@ -74,8 +74,16 @@ class GenusController extends Controller
         }
         */
 
+        $this->get('logger')->info('Showing genus '.$genusName);
+
+        $recentNotes = $genus->getNotes()
+            ->filter(function (GenusNote $note){
+                return $note->getCreatedAt() > new \DateTime('-3 months');
+            });
+
         return $this->render('genus/show.html.twig', [
             'genus' => $genus,
+            'recentNoteCount' => count($recentNotes)
         ]);
     }
 
@@ -100,7 +108,6 @@ class GenusController extends Controller
         $data =[
             'notes' => $notes
         ];
-
         return new JsonResponse($data);
     }
 }
