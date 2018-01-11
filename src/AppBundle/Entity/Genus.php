@@ -45,6 +45,7 @@ class Genus
 
     /**
      * @ORM\OneToMany(targetEntity="AppBundle\Entity\GenusNote", mappedBy="genus")
+     * @ORM\OrderBy({"createdAt" = "DESC"})
      */
     private $notes;
 
@@ -139,7 +140,7 @@ class Genus
     }
 
     /**
-     * @return mixed
+     * @return ArrayCollection|GenusNote[]
      */
     public function getNotes()
     {
