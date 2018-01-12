@@ -2,23 +2,27 @@
 
 namespace AppBundle\Twig;
 
+use AppBundle\Service\MarkdownTransformer;
+
 class MarkdownExtension extends \Twig_Extension
 {
-    public function getName()
+    private $markdownTransformer;
+
+    public function __construct(MarkdownTransformer $markdownTransformer)
     {
-        return 'app_markdown';
+        $this->markdownTransformer = $markdownTransformer;
     }
+
     public function getFilters()
     {
-        return new \Twig_SimpleFilter('markdownify', [
-            $this,
-            'parseMarkdown'
-        ]);
+        return [
+            new \Twig_SimpleFilter('markdownify', array($this, 'parseMarkdown'))
+        ];
     }
 
     public function parseMarkdown($str)
     {
-        return strtoupper($str);
+        return $this->markdownTransformer->parse($str);
     }
 
 }
