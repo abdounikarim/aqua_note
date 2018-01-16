@@ -2,6 +2,7 @@
 
 namespace AppBundle\Form;
 
+use AppBundle\Entity\Genus;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -12,14 +13,19 @@ class GenusFormType extends AbstractType
     {
         $builder
             ->add('name')
+            ->add('subFamily')
             ->add('speciesCount')
             ->add('funFact')
+            ->add('isPublished')
+            ->add('firstDiscoveredAt')
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
-
+        $resolver->setDefaults([
+           'data_class' => Genus::class
+        ]);
     }
 
     public function getBlockPrefix()
