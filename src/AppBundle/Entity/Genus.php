@@ -82,7 +82,7 @@ class Genus
     /**
      * @param mixed $subFamily
      */
-    public function setSubFamily(SubFamily $subFamily)
+    public function setSubFamily(SubFamily  $subFamily)
     {
         $this->subFamily = $subFamily;
     }
@@ -122,7 +122,7 @@ class Genus
     /**
      * @return mixed
      */
-    public function getisPublished()
+    public function getIsPublished()
     {
         return $this->isPublished;
     }
