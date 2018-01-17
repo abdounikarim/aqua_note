@@ -92,10 +92,7 @@ class Genus
         return $this->subFamily;
     }
 
-    /**
-     * @param mixed $subFamily
-     */
-    public function setSubFamily(SubFamily  $subFamily)
+    public function setSubFamily(SubFamily $subFamily)
     {
         $this->subFamily = $subFamily;
     }
