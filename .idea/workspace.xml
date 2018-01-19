@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="71ce4644-35b2-4d0e-be45-50b338ffef2e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/admin/genus/new.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/admin/genus/new.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Genus.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Genus.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/genus/new.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="377">
@@ -90,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Genus.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Genus.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Genus.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1393">
-              <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+            <state relative-caret-position="566">
+              <caret line="53" column="25" lean-forward="false" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
               <folding>
                 <element signature="e#36#84#0#PHP" expanded="true" />
               </folding>
@@ -133,12 +133,12 @@
         <option value="$PROJECT_DIR$/app/Resources/views/admin/genus/list.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/Admin/GenusAdminController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Controller/GenusController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Genus.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/SubFamily.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/DataFixtures/ORM/fixtures.yml" />
         <option value="$PROJECT_DIR$/src/AppBundle/Repository/SubFamilyRepository.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Form/GenusFormType.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/admin/genus/new.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Genus.php" />
       </list>
     </option>
   </component>
@@ -440,12 +440,12 @@
       <workItem from="1516101567111" duration="922000" />
       <workItem from="1516109728616" duration="5569000" />
       <workItem from="1516186999246" duration="2250000" />
-      <workItem from="1516356854176" duration="1518000" />
+      <workItem from="1516356854176" duration="1654000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51158000" />
+    <option name="totallyTimeSpent" value="51294000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="878" extended-state="0" />
@@ -821,21 +821,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Genus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1393">
-          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding>
-            <element signature="e#36#84#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/admin/genus/new.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
           <caret line="21" column="80" lean-forward="false" selection-start-line="21" selection-start-column="80" selection-end-line="21" selection-end-column="80" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Genus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="53" column="25" lean-forward="false" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+          <folding>
+            <element signature="e#36#84#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
