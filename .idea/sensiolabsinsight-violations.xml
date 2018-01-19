@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysis>
+  <link href="https://insight.sensiolabs.com/api/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1" rel="self" type="application/vnd.com.sensiolabs.insight+xml"/>
+  <link href="https://insight.sensiolabs.com/api/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1/status" rel="status" type="application/vnd.com.sensiolabs.insight+xml"/>
+  <link href="https://insight.sensiolabs.com/api/projects/6e7508f8-d99d-4649-892e-6624f767f962" rel="project" type="application/vnd.com.sensiolabs.insight+xml"/>
+  <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1" rel="self" type="text/html"/>
+  <status><![CDATA[finished]]></status>
+  <violations>
+    <violation severity="major" category="bugrisk" ignored="false">
+      <line>1</line>
+      <resource><![CDATA[composer.json]]></resource>
+      <title>The composer.json file should be valid</title>
+      <message><![CDATA[description : The property description is required]]></message>
+      <context start-line="1" end-line="6"><![CDATA[{
+    "name": "casrime/aqua_note",
+    "license": "proprietary",
+    "type": "project",
+    "autoload": {
+        "psr-4": {]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861326" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="bugrisk" ignored="false">
+      <line>0</line>
+      <resource><![CDATA[composer.json]]></resource>
+      <title>The composer.json file should not raise warnings</title>
+      <message><![CDATA[Defining autoload.psr-4 with an empty namespace prefix is a bad idea for performance]]></message>
+      <context/>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861340" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle" ignored="false">
+      <line>23</line>
+      <resource><![CDATA[app/Resources/views/genus/list.html.twig]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="18" end-line="23"><![CDATA[                    <td>{{ genus.updatedAt|date('Y-m-d') }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861335" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle" ignored="false">
+      <line>8</line>
+      <resource><![CDATA[.idea/modules.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="3" end-line="8"><![CDATA[  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/aqua_note.iml" filepath="$PROJECT_DIR$/.idea/aqua_note.iml" />
+    </modules>
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861336" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle" ignored="false">
+      <line>57</line>
+      <resource><![CDATA[.idea/php.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="52" end-line="57"><![CDATA[      <path value="$PROJECT_DIR$/vendor/nelmio/alice" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
+    </include_path>
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861351" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle" ignored="false">
+      <line>7</line>
+      <resource><![CDATA[.idea/symfony2.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="2" end-line="7"><![CDATA[<project version="4">
+  <component name="Symfony2PluginSettings">
+    <option name="pathToTranslation" value="var/cache/dev/translations" />
+    <option name="pluginEnabled" value="true" />
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861333" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle" ignored="false">
+      <line>6</line>
+      <resource><![CDATA[.idea/vcs.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="1" end-line="6"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861346" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle" ignored="false">
+      <line>917</line>
+      <resource><![CDATA[.idea/workspace.xml]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="912" end-line="917"><![CDATA[          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861348" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle" ignored="false">
+      <line>117</line>
+      <resource><![CDATA[src/AppBundle/Controller/GenusController.php]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="112" end-line="117"><![CDATA[        $data =[
+            'notes' => $notes
+        ];
+        return new JsonResponse($data);
+    }
+}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861347" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle" ignored="false">
+      <line>14</line>
+      <resource><![CDATA[src/AppBundle/Controller/MainController.php]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="9" end-line="14"><![CDATA[    public function homepageAction()
+    {
+        return $this->render('main/homepage.html.twig');
+    }
+
+}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861334" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle" ignored="false">
+      <line>134</line>
+      <resource><![CDATA[src/AppBundle/Entity/GenusNote.php]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="129" end-line="134"><![CDATA[    public function setGenus(Genus $genus)
+    {
+        $this->genus = $genus;
+    }
+
+}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861345" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle" ignored="false">
+      <line>151</line>
+      <resource><![CDATA[src/AppBundle/Entity/Genus.php]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="146" end-line="151"><![CDATA[    public function getNotes()
+    {
+        return $this->notes;
+    }
+
+}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861342" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle" ignored="false">
+      <line>24</line>
+      <resource><![CDATA[src/AppBundle/Entity/SubFamily.php]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="19" end-line="24"><![CDATA[
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $name;
+}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861344" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle" ignored="false">
+      <line>25</line>
+      <resource><![CDATA[src/AppBundle/Repository/GenusNoteRepository.php]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="20" end-line="25"><![CDATA[            ->andWhere('genus_note.createdAt > :recentDate')
+            ->setParameter('recentDate', new \DateTime('-3 months'))
+            ->getQuery()
+            ->execute();
+    }
+}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861332" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle" ignored="false">
+      <line>24</line>
+      <resource><![CDATA[src/AppBundle/Repository/GenusRepository.php]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="19" end-line="24"><![CDATA[            ->orderBy('genus_note.createdAt', 'DESC')
+            ->getQuery()
+            ->execute()
+            ;
+    }
+}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861341" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle" ignored="false">
+      <line>34</line>
+      <resource><![CDATA[src/AppBundle/Service/MarkdownTransformer.php]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="29" end-line="34"><![CDATA[            ->transformMarkdown($str);
+        $cache->save($key, $str);
+
+        return $str;
+    }
+}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861324" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="codestyle" ignored="false">
+      <line>30</line>
+      <resource><![CDATA[src/AppBundle/Twig/MarkdownExtension.php]]></resource>
+      <title>Text files should end with a newline character</title>
+      <message><![CDATA[This file ends with no newline character. It won't render properly on a terminal, and it's considered a bad practice. Add a simple line feed as the last character to fix it.]]></message>
+      <context start-line="25" end-line="30"><![CDATA[    public function parseMarkdown($str)
+    {
+        return $this->markdownTransformer->parse($str);
+    }
+
+}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861343" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="codestyle" ignored="false">
+      <line>133</line>
+      <resource><![CDATA[src/AppBundle/Entity/Genus.php]]></resource>
+      <title>Boolean property should not be prefixed by "is"</title>
+      <message><![CDATA[Boolean property accessor should not be setIsXXX nor getIsXXX but setXXX and isXXX.]]></message>
+      <context start-line="128" end-line="138"><![CDATA[    }
+
+    /**
+     * @param mixed $isPublished
+     */
+    public function setIsPublished($isPublished)
+    {
+        $this->isPublished = $isPublished;
+    }
+
+    public function getUpdatedAt()]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861350" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode" ignored="false">
+      <line>68</line>
+      <resource><![CDATA[src/AppBundle/Controller/GenusController.php]]></resource>
+      <title>Commented code should not be committed</title>
+      <message><![CDATA[Commented out code reduces readability and lowers the code confidence for other developers. If it's common usage for debug, it should not be committed. Using a version control system, such code can be safely removed.]]></message>
+      <context start-line="63" end-line="73"><![CDATA[        }
+
+        $transformer = $this->get('app.markdown_transformer');
+        $funFact = $transformer->parse($genus->getFunFact());
+
+        /*
+        $cache = $this->get('doctrine_cache.providers.my_markdown_cache');
+        $key = md5($funFact);
+
+        if($cache->contains($key)) {
+            $funFact = $cache->fetch($key);]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861352" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode" ignored="false">
+      <line>13</line>
+      <resource><![CDATA[web/app.php]]></resource>
+      <title>Commented code should not be committed</title>
+      <message><![CDATA[Commented out code reduces readability and lowers the code confidence for other developers. If it's common usage for debug, it should not be committed. Using a version control system, such code can be safely removed.]]></message>
+      <context start-line="8" end-line="18"><![CDATA[$loader = require __DIR__.'/../app/autoload.php';
+include_once __DIR__.'/../var/bootstrap.php.cache';
+
+$kernel = new AppKernel('prod', false);
+$kernel->loadClassCache();
+//$kernel = new AppCache($kernel);
+
+// When using the HttpCache, you need to call the method in your front controller instead of relying on the configuration parameter
+//Request::enableHttpMethodParameterOverride();
+$request = Request::createFromGlobals();
+$response = $kernel->handle($request);]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861329" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode" ignored="false">
+      <line>16</line>
+      <resource><![CDATA[web/app.php]]></resource>
+      <title>Commented code should not be committed</title>
+      <message><![CDATA[Commented out code reduces readability and lowers the code confidence for other developers. If it's common usage for debug, it should not be committed. Using a version control system, such code can be safely removed.]]></message>
+      <context start-line="11" end-line="21"><![CDATA[$kernel = new AppKernel('prod', false);
+$kernel->loadClassCache();
+//$kernel = new AppCache($kernel);
+
+// When using the HttpCache, you need to call the method in your front controller instead of relying on the configuration parameter
+//Request::enableHttpMethodParameterOverride();
+$request = Request::createFromGlobals();
+$response = $kernel->handle($request);
+$response->send();
+$kernel->terminate($request, $response);
+]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861325" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode" ignored="false">
+      <line>19</line>
+      <resource><![CDATA[src/AppBundle/Entity/Genus.php]]></resource>
+      <title>Unused method, property, variable or parameter</title>
+      <message><![CDATA[This id attribute is declared but never used. You should remove it.]]></message>
+      <context start-line="14" end-line="24"><![CDATA[    /**
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $name;]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861337" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode" ignored="false">
+      <line>18</line>
+      <resource><![CDATA[src/AppBundle/Entity/SubFamily.php]]></resource>
+      <title>Unused method, property, variable or parameter</title>
+      <message><![CDATA[This id attribute is declared but never used. You should remove it.]]></message>
+      <context start-line="13" end-line="23"><![CDATA[    /**
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Column(type="integer")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $name;]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861327" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="minor" category="deadcode" ignored="false">
+      <line>23</line>
+      <resource><![CDATA[src/AppBundle/Entity/SubFamily.php]]></resource>
+      <title>Unused method, property, variable or parameter</title>
+      <message><![CDATA[This name attribute is declared but never used. You should remove it.]]></message>
+      <context start-line="18" end-line="24"><![CDATA[    private $id;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $name;
+}]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861349" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="major" category="performance" ignored="false">
+      <line>27</line>
+      <resource><![CDATA[src/AppBundle/Service/MarkdownTransformer.php]]></resource>
+      <title>sleep() should not be used</title>
+      <message><![CDATA[sleep() may create timeouts without even protecting your application.]]></message>
+      <context start-line="22" end-line="32"><![CDATA[        $key = md5($str);
+
+        if($cache->contains($key)) {
+            return $cache->fetch($key);
+        }
+        sleep(1);
+        $str = $this->markdownParser
+            ->transformMarkdown($str);
+        $cache->save($key, $str);
+
+        return $str;]]></context>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861328" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="performance" ignored="false">
+      <line>0</line>
+      <resource><![CDATA[app/.htaccess]]></resource>
+      <title>.htaccess should be avoided</title>
+      <message><![CDATA[A .htaccess file has been spotted. You should consider moving it to the server configuration to improve global performances.]]></message>
+      <context/>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861339" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="performance" ignored="false">
+      <line>0</line>
+      <resource><![CDATA[src/.htaccess]]></resource>
+      <title>.htaccess should be avoided</title>
+      <message><![CDATA[A .htaccess file has been spotted. You should consider moving it to the server configuration to improve global performances.]]></message>
+      <context/>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861330" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="performance" ignored="false">
+      <line>0</line>
+      <resource><![CDATA[web/.htaccess]]></resource>
+      <title>.htaccess should be avoided</title>
+      <message><![CDATA[A .htaccess file has been spotted. You should consider moving it to the server configuration to improve global performances.]]></message>
+      <context/>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861323" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="security" ignored="false">
+      <line>0</line>
+      <resource><![CDATA[web/apple-touch-icon.png]]></resource>
+      <title>Default favicon should be changed</title>
+      <message><![CDATA[Default Apple touch Symfony favicon found.
+             This reveals the backend engine of the application and makes it more vulnerable to attackers. Consider using a custom favicon instead - plus, your users will memorize your application more easily.]]></message>
+      <context/>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861338" rel="self" type="text/html"/>
+    </violation>
+    <violation severity="info" category="security" ignored="false">
+      <line>0</line>
+      <resource><![CDATA[web/favicon.ico]]></resource>
+      <title>Default favicon should be changed</title>
+      <message><![CDATA[Default default HiDPI Symfony favicon found.
+             This reveals the backend engine of the application and makes it more vulnerable to attackers. Consider using a custom favicon instead - plus, your users will memorize your application more easily.]]></message>
+      <context/>
+      <link href="https://insight.sensiolabs.com/projects/6e7508f8-d99d-4649-892e-6624f767f962/analyses/1?status=new#592861331" rel="self" type="text/html"/>
+    </violation>
+  </violations>
+  <grades>
+    <entry><![CDATA[none]]></entry>
+    <entry><![CDATA[bronze]]></entry>
+    <entry><![CDATA[silver]]></entry>
+    <entry><![CDATA[gold]]></entry>
+    <entry><![CDATA[platinum]]></entry>
+  </grades>
+  <failed>false</failed>
+  <grade><![CDATA[bronze]]></grade>
+  <next-grade><![CDATA[silver]]></next-grade>
+  <begin-at><![CDATA[2018-01-17T15:33:50+0100]]></begin-at>
+  <end-at><![CDATA[2018-01-17T15:34:33+0100]]></end-at>
+  <duration>11</duration>
+  <number>1</number>
+  <altered>false</altered>
+  <remediation-cost>17.25</remediation-cost>
+  <nb-violations>30</nb-violations>
+  <reference><![CDATA[e99df5e0d5823a23c650ac9019d3a529916c2672]]></reference>
+  <launched-by><![CDATA[abdounikarim]]></launched-by>
+  <configuration>
+    <ignored-branches>
+      <branch><![CDATA[gh-pages]]></branch>
+    </ignored-branches>
+    <pre-composer-script/>
+    <post-composer-script/>
+    <working-directory/>
+    <php-version/>
+    <php-ini/>
+    <commit-failure-conditions>
+      <branch><![CDATA[project.severity.critical > 0]]></branch>
+      <branch><![CDATA[project.severity.major > 0]]></branch>
+    </commit-failure-conditions>
+    <global-excluded-dirs>
+      <dir><![CDATA[vendor]]></dir>
+      <dir><![CDATA[vendors]]></dir>
+      <dir><![CDATA[test]]></dir>
+      <dir><![CDATA[tests]]></dir>
+      <dir><![CDATA[Tests]]></dir>
+      <dir><![CDATA[spec]]></dir>
+      <dir><![CDATA[features]]></dir>
+      <dir><![CDATA[Fixtures]]></dir>
+      <dir><![CDATA[DataFixtures]]></dir>
+      <dir><![CDATA[var]]></dir>
+    </global-excluded-dirs>
+    <excluded-patterns>
+      <pattern><![CDATA[app/check.php]]></pattern>
+      <pattern><![CDATA[app/SymfonyRequirements.php]]></pattern>
+      <pattern><![CDATA[public/index.php]]></pattern>
+      <pattern><![CDATA[web/config.php]]></pattern>
+      <pattern><![CDATA[web/app_*.php]]></pattern>
+    </excluded-patterns>
+    <patterns>
+      <file>
+        <pattern><![CDATA[*.php]]></pattern>
+        <pattern><![CDATA[*.twig]]></pattern>
+        <pattern><![CDATA[*.xml]]></pattern>
+        <pattern><![CDATA[*.yml]]></pattern>
+        <pattern><![CDATA[*.yaml]]></pattern>
+        <pattern><![CDATA[*.ini]]></pattern>
+        <pattern><![CDATA[*.dist]]></pattern>
+        <pattern><![CDATA[*.sql]]></pattern>
+        <pattern><![CDATA[*.md]]></pattern>
+        <pattern><![CDATA[*.rst]]></pattern>
+        <pattern><![CDATA[composer.*]]></pattern>
+        <pattern><![CDATA[.gitignore]]></pattern>
+        <pattern><![CDATA[LICENSE]]></pattern>
+        <pattern><![CDATA[README]]></pattern>
+        <pattern><![CDATA[Makefile]]></pattern>
+        <pattern><![CDATA[.htaccess]]></pattern>
+      </file>
+      <php>
+        <pattern><![CDATA[*.php]]></pattern>
+      </php>
+      <twig>
+        <pattern><![CDATA[*.twig]]></pattern>
+      </twig>
+    </patterns>
+    <rules>
+      <rule name="symfony.use_dir_file_constant" enabled="false"/>
+    </rules>
+    <parameters>
+      <parameter name="project_type">1</parameter>
+    </parameters>
+    <env/>
+    <notifications/>
+  </configuration>
+  <previous-analyses-references>
+    <analysis-reference number="1">e99df5e0d5823a23c650ac9019d3a529916c2672</analysis-reference>
+  </previous-analyses-references>
+  <nb-violations-new>30</nb-violations-new>
+  <nb-violations-existing>0</nb-violations-existing>
+  <nb-violations-fixed>0</nb-violations-fixed>
+  <nb-violations-ignored>0</nb-violations-ignored>
+</analysis>
