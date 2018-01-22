@@ -29,10 +29,7 @@ class User implements UserInterface
      */
     private $password;
 
-    /**
-     * @ORM\Column(type="string")
-     */
-    private $plainPasswrod;
+    private $plainPassword;
 
     public function getUsername()
     {
@@ -72,23 +69,23 @@ class User implements UserInterface
 
     public function eraseCredentials()
     {
-        $this->plainPasswrod = null;
+        $this->plainPassword = null;
     }
 
     /**
      * @return mixed
      */
-    public function getPlainPasswrod()
+    public function getPlainPassword()
     {
-        return $this->plainPasswrod;
+        return $this->plainPassword;
     }
 
     /**
      * @param mixed $plainPasswrod
      */
-    public function setPlainPasswrod($plainPasswrod)
+    public function setPlainPassword($plainPassword)
     {
-        $this->plainPasswrod = $plainPasswrod;
+        $this->plainPassword = $plainPassword;
         $this->password = null;
     }
 
