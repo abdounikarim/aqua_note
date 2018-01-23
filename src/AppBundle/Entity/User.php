@@ -30,7 +30,7 @@ class User implements UserInterface
     private $password;
 
     /**
-     * @ORM\Column(type="json_array")
+     * @ORM\Column(type="json")
      */
     private $roles = [];
 
@@ -106,5 +106,11 @@ class User implements UserInterface
         $this->roles = $roles;
     }
 
-
+    /**
+     * @return mixed
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
 }

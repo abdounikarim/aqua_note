@@ -41,7 +41,8 @@ class GenusAdminController extends Controller
             $em->persist($genus);
             $em->flush();
 
-            $this->addFlash('success', 'Genus created');
+            $this->addFlash('success',
+                sprintf('Genus created (%s)', $this->getUser()->getEmail()));
             return $this->redirectToRoute('admin_genus_list');
         }
         return $this->render('admin/genus/new.html.twig', [
