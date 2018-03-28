@@ -10,6 +10,8 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\FormInterface;
+use Symfony\Component\Form\FormView;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class GenusFormType extends AbstractType
@@ -26,7 +28,9 @@ class GenusFormType extends AbstractType
                 }
             ])
             ->add('speciesCount')
-            ->add('funFact')
+            ->add('funFact', null, [
+                'help' => 'For example, Leatherback sea turtles can travel more than 10,000 miles every year!'
+            ])
             ->add('isPublished', ChoiceType::class, [
                 'choices' => [
                     'Yes' => true,
@@ -54,4 +58,12 @@ class GenusFormType extends AbstractType
     {
         return 'app_bundle_genus_form_type';
     }
+
+    /*
+    public function finishView(FormView $view, FormInterface $form, array $options)
+    {
+        $view['funFact']->vars['help'] = 'For example, Leatherback sea turtles can travel more than 10,000 miles every year!';
+    }*/
+
+
 }
