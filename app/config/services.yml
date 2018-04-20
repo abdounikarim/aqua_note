@@ -25,7 +25,8 @@ services:
     Doctrine\ORM\EntityManager: '@doctrine.orm.default_entity_manager'
 
     AppBundle\Service\MarkdownTransformer:
-        arguments: ['','@doctrine_cache.providers.my_markdown_cache']
+        arguments:
+            $cacheDriver: '@doctrine_cache.providers.my_markdown_cache'
 
     AppBundle\Twig\MarkdownExtension:
 
