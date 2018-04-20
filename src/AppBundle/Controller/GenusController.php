@@ -53,7 +53,7 @@ class GenusController extends Controller
     /**
      * @Route("/genus/{genusName}", name="genus_show")
      */
-    public function showAction($genusName)
+    public function showAction($genusName, MarkdownTransformer $transformer)
     {
         $em = $this->getDoctrine()->getManager();
         $genus = $em->getRepository('AppBundle:Genus')
@@ -62,7 +62,6 @@ class GenusController extends Controller
             throw $this->createNotFoundException('No genus found');
         }
 
-        $transformer = $this->get('app.markdown_transformer');
         $funFact = $transformer->parse($genus->getFunFact());
 
         /*
