@@ -26,6 +26,10 @@ services:
     AppBundle\Service\MarkdownTransformer:
         arguments: ['@markdown.parser','@doctrine_cache.providers.my_markdown_cache']
 
+    AppBundle\Twig\MarkdownExtension:
+
+    AppBundle\Security\LoginFormAuthenticator: ~
+
     AppBundle\Doctrine\HashPasswordListener:
         tags:
             - { name: doctrine.event_subscriber }
