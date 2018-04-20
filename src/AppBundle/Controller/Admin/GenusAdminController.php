@@ -4,6 +4,7 @@ namespace AppBundle\Controller\Admin;
 
 use AppBundle\Entity\Genus;
 use AppBundle\Form\GenusFormType;
+use AppBundle\Service\MessageManager;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -61,16 +62,22 @@ class GenusAdminController extends Controller
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $genus = $form->getData();
-
             $em = $this->getDoctrine()->getManager();
             $em->persist($genus);
             $em->flush();
-
-            $this->addFlash('success', 'Genus updated!');
-
-            return $this->redirectToRoute('admin_genus_list');
+            $this->addFlash(
+                'success',
+                $this->get(MessageManager::class)->getEncouragingMessage()
+            );
+            return $this->redirectToRoute('admin_genus_edit', [
+                'id' => $genus->getId()
+            ]);
+        }  elseif ($form->isSubmitted()) {
+            $this->addFlash(
+                'error',
+                $this->get(MessageManager::class)->getDiscouragingMessage()
+            );
         }
-
         return $this->render('admin/genus/edit.html.twig', [
             'genusForm' => $form->createView()
         ]);
