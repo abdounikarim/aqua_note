@@ -5,36 +5,6 @@ imports:
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
-parameters:
-    locale: en
-    cache_type: file_system
-    container.autowiring.strict_mode: true
-
-framework:
-    csrf_protection: ~
-    #serializer:      { enable_annotations: true }
-    templating:
-        engines: ['twig']
-    default_locale:  "%locale%"
-    trusted_hosts:   ~
-    session:
-        # http://symfony.com/doc/current/reference/configuration/framework.html#handler-id
-        handler_id:  session.handler.native_file
-        save_path:   "%kernel.root_dir%/../var/sessions/%kernel.environment%"
-    fragments:       ~
-    http_method_override: true
-    assets: ~
-
-# Twig Configuration
-twig:
-    debug:            "%kernel.debug%"
-    strict_variables: "%kernel.debug%"
-    number_format:
-        thousands_separator: ','
-    form_themes:
-        - bootstrap_3_layout.html.twig
-        - _formTheme.html.twig
-
 # Doctrine Configuration
 doctrine:
     dbal:
