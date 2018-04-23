@@ -5,6 +5,7 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Genus;
 use AppBundle\Entity\GenusNote;
 use AppBundle\Service\MarkdownTransformer;
+use Psr\Log\LoggerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -53,7 +54,7 @@ class GenusController extends Controller
     /**
      * @Route("/genus/{genusName}", name="genus_show")
      */
-    public function showAction($genusName, MarkdownTransformer $transformer)
+    public function showAction($genusName, MarkdownTransformer $transformer, LoggerInterface $logger)
     {
         $em = $this->getDoctrine()->getManager();
         $genus = $em->getRepository('AppBundle:Genus')
@@ -78,7 +79,7 @@ class GenusController extends Controller
         }
         */
 
-        $this->get('logger')->info('Showing genus '.$genusName);
+        $logger->info('Showing genus '.$genusName);
 
         $recentNotes = $em->getRepository('AppBundle:GenusNote')
             ->findAllRecentNotesForGenus($genus);

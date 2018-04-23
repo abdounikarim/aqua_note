@@ -2,15 +2,17 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
  * @ORM\Table(name="user")
- * @UniqueEntity(fields={"email"}, message="Looks like you already have an account")
+ * @UniqueEntity(fields={"email"}, message="It looks like you already have an account!")
  */
 class User implements UserInterface
 {
@@ -24,45 +26,92 @@ class User implements UserInterface
     /**
      * @Assert\NotBlank()
      * @Assert\Email()
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", unique=true)
      */
     private $email;
 
     /**
+     * The encoded password
+     *
      * @ORM\Column(type="string")
      */
     private $password;
 
     /**
-     * @ORM\Column(type="json")
+     * A non-persisted field that's used to create the encoded password.
+     * @Assert\NotBlank(groups={"Registration"})
+     *
+     * @var string
+     */
+    private $plainPassword;
+
+    /**
+     * @ORM\Column(type="json_array")
      */
     private $roles = [];
 
     /**
-     * @Assert\NotBlank(groups={"Registration"})
+     * @ORM\Column(type="boolean")
      */
-    private $plainPassword;
+    private $isScientist = false;
 
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    private $firstName;
+
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    private $lastName;
+
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    private $avatarUri;
+
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    private $universityName;
+
+    /**
+     * @ORM\OneToMany(targetEntity="GenusScientist", mappedBy="user")
+     */
+    private $studiedGenuses;
+
+    public function __construct()
+    {
+        $this->studiedGenuses = new ArrayCollection();
+    }
+
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    // needed by the security system
     public function getUsername()
     {
         return $this->email;
     }
 
-    /**
-     * @param mixed $email
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-    }
-
     public function getRoles()
     {
         $roles = $this->roles;
-        if(!in_array('ROLE_USER', $roles)) {
+
+        // give everyone ROLE_USER!
+        if (!in_array('ROLE_USER', $roles)) {
             $roles[] = 'ROLE_USER';
         }
+
         return $roles;
+    }
+
+    public function setRoles(array $roles)
+    {
+        $this->roles = $roles;
     }
 
     public function getPassword()
@@ -70,17 +119,9 @@ class User implements UserInterface
         return $this->password;
     }
 
-    /**
-     * @param mixed $password
-     */
-    public function setPassword($password)
-    {
-        $this->password = $password;
-    }
-
     public function getSalt()
     {
-
+        // leaving blank - I don't need/have a password!
     }
 
     public function eraseCredentials()
@@ -88,36 +129,94 @@ class User implements UserInterface
         $this->plainPassword = null;
     }
 
-    /**
-     * @return mixed
-     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
     public function getPlainPassword()
     {
         return $this->plainPassword;
     }
 
-    /**
-     * @param mixed $plainPasswrod
-     */
     public function setPlainPassword($plainPassword)
     {
         $this->plainPassword = $plainPassword;
+        // forces the object to look "dirty" to Doctrine. Avoids
+        // Doctrine *not* saving this entity, if only plainPassword changes
         $this->password = null;
     }
 
-    /**
-     * @param mixed $roles
-     */
-    public function setRoles($roles)
+    public function isScientist()
     {
-        $this->roles = $roles;
+        return $this->isScientist;
+    }
+
+    public function setIsScientist($isScientist)
+    {
+        $this->isScientist = $isScientist;
+    }
+
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+
+    public function setFirstName($firstName)
+    {
+        $this->firstName = $firstName;
+    }
+
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
+
+    public function setLastName($lastName)
+    {
+        $this->lastName = $lastName;
+    }
+
+    public function getAvatarUri()
+    {
+        return $this->avatarUri;
+    }
+
+    public function setAvatarUri($avatarUri)
+    {
+        $this->avatarUri = $avatarUri;
+    }
+
+    public function getUniversityName()
+    {
+        return $this->universityName;
+    }
+
+    public function setUniversityName($universityName)
+    {
+        $this->universityName = $universityName;
+    }
+
+    public function getFullName()
+    {
+        return trim($this->getFirstName().' '.$this->getLastName());
     }
 
     /**
-     * @return mixed
+     * @return ArrayCollection|GenusScientist[]
      */
-    public function getEmail()
+    public function getStudiedGenuses()
     {
-        return $this->email;
+        return $this->studiedGenuses;
     }
 }
