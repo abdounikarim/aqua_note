@@ -78,14 +78,9 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
     {
-        // if the user hits a secure page and start() was called, this was
-        // the URL they were on, and probably where you want to redirect to
-        $targetPath = $this->getTargetPath($request->getSession(), $providerKey);
-
-        if (!$targetPath) {
-            $targetPath = $this->router->generate('homepage');
+        if ($targetPath = $this->getTargetPath($request->getSession(), 'main')) {
+            return new RedirectResponse($targetPath);
         }
-
-        return new RedirectResponse($targetPath);
+        return new RedirectResponse($this->router->generate('homepage'));
     }
 }
