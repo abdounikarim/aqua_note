@@ -6,13 +6,13 @@ use AppBundle\Entity\Genus;
 use AppBundle\Form\GenusFormType;
 use AppBundle\Service\MessageManager;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
  * @Route("/admin")
- * @Security("is_granted('ROLE_MANAGE_GENUS')")
+ * @IsGranted("ROLE_MANAGE_GENUS")
  */
 class GenusAdminController extends Controller
 {
